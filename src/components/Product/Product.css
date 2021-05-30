@@ -1,0 +1,21 @@
+.player-container img{
+    height: 220px;
+    width: 250px;
+}
+.player-container{
+    margin: 20px;
+    padding: 20px;
+    background-color:lightcyan;
+    color: green;
+    border-radius: 15px;
+}
+.addButton{
+    background-color:green;
+    color:red;
+    width:160px;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;   
+}

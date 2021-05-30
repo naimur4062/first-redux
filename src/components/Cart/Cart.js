@@ -1,19 +1,20 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { removeFromCart } from '../../redux/actions/cartAction';
+import './Cart.css';
 
 const Cart = (props) => {
     const { cart, removeFromCart } = props;
     return (
         <div>
-            <h3>This is cart.</h3>
-            <ul>
+            <h3 className="text-center my-4">Players name for final squad</h3>
+            <div className="text-center my-2">
                 {
-                    cart.map(pd => <li key={pd.cartId}>{pd.name}
-                        <button onClick={() => removeFromCart(pd.cartId)}>X</button>
-                    </li>)
+                    cart.map(pd => <p style={{color: 'green'}} key={pd.cartId}>{pd.name}
+                        <button className="remove ms-2" onClick={() => removeFromCart(pd.cartId)}>Remove</button>
+                    </p>)
                 }
-            </ul>
+            </div>
         </div>
     );
 };

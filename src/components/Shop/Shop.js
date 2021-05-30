@@ -7,8 +7,8 @@ const Shop = (props) => {
     console.log(props)
     const { products, addToCart } = props;
     return (
-        <div>
-            <h2>This is Shop</h2>
+        <div className="row container-fluid">
+            <h2 className="text-center my-4">All Players</h2>
             {
                 products.map(product => <Product
                     key={product.id}
@@ -29,10 +29,5 @@ const mapStateToProps = state => {
 const mapDispatchToProps = {
     addToCart: addToCart
 }
-
-// const connectToStore = connect(mapStateToProps, mapDispatchToProps);
-// connectToStore(Shop);
-
-// connect(mapStateToProps, mapDispatchToProps)(Shop);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Shop);
